@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./Fonts/DMSans-Regular.ttf");
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+  font-family: "DM Sans";
+}
+
+.top {
+  width: 100%;
+  height: 80px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: inherit;
+}
+
+
+.top-container {
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-container .balance {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  font-weight: 700;
+}
+
+
+.logo {
+  display: flex;
+}
+
+.logo .first-circle {
+  border: 1px solid white;
+  border-radius: 100%;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  margin-left: -15px;
+}
+.logo .second-circle {
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 100%;
+  height: 26px;
+  width: 26px;  
+}
+
+.bottom {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: inherit;
+}
+
+.bottom-container {
+  height: 100%;
+  /* width: 100%; */
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bottom-container .spent {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.bottom-container .graph {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 13px;
+  justify-content: space-evenly;
+  font-size: 12px;
+  color: #777;
+}
+
+.bottom-container .bar {
+  width: 40px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bottom-container .day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.bar-amount {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: -30px;
+}
+
+.bar:hover {
+  background-color: hsl(186, 34%, 60%);
+  transition: 100ms ease-out;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  color: #777;
+  margin-top: 10px;
+}
+
+.inner-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.cash {
+  font-size: 30px;
+  font-weight: 700;
+  color:hsl(25, 47%, 15%)
+}
+
+.last-month {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 4px;
+}
