@@ -13,11 +13,27 @@
   font-family: "DM Sans";
 }
 
+@keyframes open {
+  0% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1.1)
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .top {
   width: 100%;
   height: 80px;
   background-color: hsl(10, 79%, 65%);
+  overflow: hidden;
   border-radius: inherit;
+  animation: open 500ms ease-in;
 }
 
 
@@ -50,12 +66,34 @@
   width: 24px;
   position: absolute;
   margin-left: -15px;
+  animation: firstCircle 1000ms ease-in;
 }
 .logo .second-circle {
   background-color: hsl(25, 47%, 15%);
   border-radius: 100%;
   height: 26px;
   width: 26px;  
+  animation: secondCircle 1000ms ease-in;
+}
+
+@keyframes firstCircle {
+  from {
+    transform: translateX(-1000%)
+  }
+
+  to {
+    transform: translateX(0)
+  }
+}
+
+@keyframes secondCircle {
+  from {
+    transform: translateX(1000%)
+  }
+
+  to {
+    transform: translateX(0)
+  }
 }
 
 .bottom {
@@ -63,6 +101,7 @@
   height: 400px;
   background-color: white;
   border-radius: inherit;
+  animation: open 500ms ease-in;
 }
 
 .bottom-container {
@@ -95,6 +134,18 @@
   background-color: hsl(10, 79%, 65%);
   border-radius: 4px;
   cursor: pointer;
+  transition: all 100ms ease-in-out;
+  animation: anim 500ms ease-in;
+}
+
+@keyframes anim {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100% !important;
+  }
 }
 
 .bottom-container .day {
@@ -115,7 +166,6 @@
 
 .bar:hover {
   background-color: hsl(186, 34%, 60%);
-  transition: 100ms ease-out;
 }
 
 .footer {
